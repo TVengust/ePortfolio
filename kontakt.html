@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt — Toni Vengust</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGACIJA -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">TONI.VENGUST</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projekti.html">Projekti</a>
+      <a href="o-meni.html">O meni</a>
+      <a href="kontakt.html" class="active">Kontakt</a>
+    </div>
+  </nav>
+
+  <!-- KONTAKT -->
+  <section class="contact">
+
+    <!-- Lijevi dio: info -->
+    <div class="contact-info">
+      <span class="tag">Javi se</span>
+      <h1>Javi mi se</h1>
+      <p>Imaš projekt, pitanje ili priliku za suradnju? Slobodno se javi — odgovaram u roku od 24 sata.</p>
+
+      <ul class="contact-list">
+        <li>
+          <span class="contact-icon">✉</span>
+          <a href="mailto:tonivengust03@gmail.com">tonivengust03@gmail.com</a>
+        </li>
+        <li>
+          <span class="contact-icon">⌨</span>
+          <a href="https://github.com/TVengust" target="_blank">github.com/TVengust</a>
+        </li>
+        <li>
+          <span class="contact-icon">◎</span>
+          <a href="https://instagram.com/tonivengust" target="_blank">@tonivengust</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Desni dio: forma -->
+    <div class="contact-form">
+      <h2 class="section-label">Forma</h2>
+      <form action="https://formspree.io/f/TVOJ_ID" method="POST">
+        <label for="ime">Ime i prezime</label>
+        <input type="text" id="ime" name="ime" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="poruka">Poruka</label>
+        <textarea id="poruka" name="poruka" rows="5" required></textarea>
+
+        <button type="submit" class="btn btn-primary">Pošalji →</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>Toni Vengust · 2025.</span>
+    <div class="footer-links">
+      <a href="mailto:tonivengust03@gmail.com">Email</a>
+      <a href="https://github.com/TVengust" target="_blank">GitHub</a>
+    </div>
+  </footer>
+
+</body>
+</html>

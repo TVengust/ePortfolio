@@ -1,0 +1,552 @@
+/* ===== VARIJABLE (paleta iz Figme) ===== */
+:root {
+  --akcent: #534AB7;
+  --akcent-tamni: #3C3489;
+  --akcent-svijetli: #EEEDFE;
+  --hover: #CECBF6;
+  --tekst: #2C2C2A;
+  --muted: #888780;
+  --border: #E5E4E0;
+  --surface: #F5F5F4;
+  --bijela: #FFFFFF;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--tekst);
+  background: var(--bijela);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== NAVIGACIJA ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bijela);
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: var(--muted);
+  margin-left: 28px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--tekst);
+}
+
+.nav-links a.active {
+  color: var(--akcent);
+  font-weight: 500;
+}
+
+/* ===== HERO ===== */
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 48px 64px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--akcent);
+}
+
+.hero h1 {
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 18px 0;
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 440px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  margin-top: 28px;
+  display: flex;
+  gap: 12px;
+}
+
+/* ===== GUMBI ===== */
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--akcent);
+  color: var(--bijela);
+}
+
+.btn-primary:hover {
+  background: var(--akcent-tamni);
+}
+
+.btn-ghost {
+  border: 1px solid var(--akcent);
+  color: var(--akcent);
+}
+
+.btn-ghost:hover {
+  background: var(--akcent-svijetli);
+}
+
+/* ===== IZDVOJENI PROJEKTI ===== */
+.featured {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 48px 64px;
+  border-top: 1px solid var(--border);
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(83, 74, 183, 0.12);
+}
+
+.card-img {
+  height: 160px;
+  background: var(--akcent-svijetli);
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 14px 16px;
+}
+
+.card-body h3 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card-tag {
+  font-size: 12px;
+  color: var(--akcent);
+  margin-top: 4px;
+  display: inline-block;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 48px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.footer-links a {
+  margin-left: 18px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--akcent);
+}
+
+/* ===== RESPONZIVNOST (mobitel) ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+  .nav-links a {
+    margin-left: 16px;
+    font-size: 13px;
+  }
+  .hero {
+    padding: 48px 24px 40px;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .featured {
+    padding: 28px 24px 48px;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer {
+    padding: 24px;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* ===== ZAGLAVLJE STRANICE (Projekti, Kontakt) ===== */
+.page-head {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 48px 24px;
+}
+
+.page-head h1 {
+  font-size: 34px;
+  font-weight: 500;
+  margin: 10px 0 8px;
+}
+
+.page-head p {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* ===== PROJEKTI (grid 2x2) ===== */
+.projects {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 48px 64px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(83, 74, 183, 0.12);
+}
+
+.project-img {
+  position: relative;
+  height: 200px;
+  background: var(--akcent-svijetli);
+  overflow: hidden;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-chip {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: var(--bijela);
+  color: var(--akcent);
+  font-size: 11px;
+  padding: 4px 11px;
+  border-radius: 20px;
+}
+
+.project-body {
+  padding: 18px 20px 20px;
+}
+
+.project-body h3 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.project-body p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.project-link {
+  font-size: 13px;
+  color: var(--akcent);
+  font-weight: 500;
+}
+
+.project-link:hover {
+  color: var(--akcent-tamni);
+}
+
+/* ===== O MENI ===== */
+.about-top {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 48px 36px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.about-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--akcent-svijetli);
+  border: 1px solid var(--hover);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.about-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-intro h1 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 8px 0 10px;
+}
+
+.about-intro p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 440px;
+}
+
+.about-details {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 48px 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.info-list {
+  list-style: none;
+}
+
+.info-list li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.skill {
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: var(--akcent-svijetli);
+  color: var(--akcent-tamni);
+}
+
+/* ===== KONTAKT ===== */
+.contact {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+}
+
+.contact-info h1 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 8px 0 12px;
+}
+
+.contact-info > p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.contact-icon {
+  color: var(--akcent);
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  margin-bottom: 16px;
+  color: var(--tekst);
+  transition: border 0.2s, background 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--akcent);
+  background: var(--bijela);
+}
+
+.contact-form button {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===== RESPONZIVNOST za nove stranice ===== */
+@media (max-width: 768px) {
+  .page-head { padding: 40px 24px 16px; }
+  .page-head h1 { font-size: 28px; }
+  .projects { padding: 12px 24px 48px; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .about-top {
+    padding: 40px 24px 28px;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .about-intro p { margin: 0 auto; }
+  .about-details {
+    padding: 16px 24px 48px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .contact {
+    padding: 40px 24px;
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+/* ===== SLIKE RAZLIČITIH FORMATA ===== */
+/* Logo-tip slike (WoodWatch) - ne rezati, bijela pozadina */
+.card-img.logo-fit,
+.project-img.logo-fit {
+  background: var(--bijela);
+}
+
+.card-img.logo-fit img,
+.project-img.logo-fit img {
+  object-fit: contain;
+  padding: 24px;
+}
+
+/* Banner na crnoj pozadini (Apartmani) - ne rezati */
+.project-img.dark-bg,
+.card-img.dark-bg {
+  background: #000;
+}
+.project-img.dark-bg img,
+.card-img.dark-bg img {
+  object-fit: contain;
+  padding: 0;
+}
